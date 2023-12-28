@@ -96,17 +96,18 @@ function addButtonListener(btn, clickedLetter) {
 
 // // Word list for the game
 const hangmanWordList = [
-    { word: "Mona Lisa", hint: "A famous portrait by Leonardo da Vinci" },
-    { word: "Starry Night", hint: "A renowned painting by Vincent van Gogh" },
-    { word: "Back to the Future", hint: "A sci-fi movie about a time-traveling DeLorean" },
-    { word: "Harry Potter", hint: "A fantasy film about a boy who discovers he's a wizard" },
-    { word: "Inception", hint: "A mind-bending movie directed by Christopher Nolan" },
-    { word: "Mona Lisa", hint: "A famous portrait by Leonardo da Vinci" },
-    { word: "Starry Night", hint: "A renowned painting by Vincent van Gogh" },
-    { word: "Pyramids", hint: "An ancient wonder in Egypt" },
-    { word: "Eiffel Tower", hint: "An iconic tower in France" },
-    { word: "Great Wall", hint: "A massive wall in China" },
-    ]
+    { word: "apple", hint: "A fruit" },
+    { word: "banana", hint: "Another fruit" },
+    { word: "elephant", hint: "A large mammal" },
+    { word: "computer", hint: "An electronic device" },
+    { word: "guitar", hint: "A musical instrument" },
+    { word: "ocean", hint: "A large body of water" },
+    { word: "mountain", hint: "A tall landform" },
+    { word: "pizza", hint: "A popular food item" },
+    { word: "robot", hint: "A machine designed to perform tasks" },
+    { word: "sunflower", hint: "A type of flower" }
+];
+
 
 
 // Function to get a random word from the word list
@@ -136,7 +137,7 @@ const gameOver = (isVictory) => {
     setTimeout(() => {
         if (isVictory) {
             gameModal.querySelector("img").src = `https://media4.giphy.com/media/BPJmthQ3YRwD6QqcVD/giphy.gif`;
-            gameModal.querySelector("h4").innerText = `Congrats! You won`;
+            gameModal.querySelector("h4").innerText = `Congrats! You won!`;
         } else {
             gameModal.querySelector("img").src = 'https://media.tenor.com/Uj4RSxn_BTMAAAAM/game-over-glitch.gif'; // Provide an appropriate game over image
             gameModal.querySelector("h4").innerText = `Game Over!`;
@@ -145,4 +146,7 @@ const gameOver = (isVictory) => {
         keyboard.querySelectorAll("button").forEach(btn => btn.disabled = true); // Disable all buttons when game ends
     }, 300);
 };
+
+
+
 
