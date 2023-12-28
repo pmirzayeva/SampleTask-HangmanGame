@@ -24,7 +24,7 @@ const resetGame = () => {
         btn.disabled = false;
         btn.style.backgroundColor = '';
     }); 
-    guesses.innerHTML=`<span>🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span>`
+    guesses.innerHTML=`Your chances: <span>🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span><span>/🩶</span>`
 
 };
 
